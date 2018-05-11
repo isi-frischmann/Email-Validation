@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Success</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+
+<form action="/added" method="POST">
+    <center><h1>Thanks for your registration</h1></center>
+    <center><p>The email you entered: {{email}} is VALID.</p></center>
+    <center><p>Thank you!</p></center>
+</form>
+    
+<h1></h1>
+<center><p>{% for email in userMail %}
+    {{email.email}} {{email.created_at}} {{email.updated_at}}</p><br>
+{% endfor %}</center>
+
+
+</body>
+</html>
